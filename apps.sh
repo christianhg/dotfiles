@@ -23,6 +23,7 @@ brew cask install google-chrome-canary
 brew cask install hyper
 brew cask install intellij-idea
 brew cask install istat-menus
+brew cask install iterm2
 brew cask install little-snitch
 brew cask install postman
 brew cask install spectacle
