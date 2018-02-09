@@ -1,5 +1,30 @@
 # christianhg's dotfiles
 
+## Set up ZSH
+
+```
+./zsh.sh
+```
+
+Update plugins:
+
+```
+plugins=( [plugins...] zsh-syntax-highlighting zsh-autosuggestions)
+```
+
+Update prompt:
+
+```
+autoload -U promptinit; promptinit
+prompt pure
+```
+
+Refresh:
+
+```
+source ~/.zshrc
+```
+
 ## Make Ruby usable
 
 ```
