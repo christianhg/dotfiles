@@ -32,6 +32,7 @@ brew cask install vlc
 brew install node
 brew install tree
 brew install unrar
+brew install wallpaper
 brew install yarn
 
 brew install zsh zsh-completions
