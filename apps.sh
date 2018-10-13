@@ -45,3 +45,4 @@ brew cleanup
 npm install --global npm
 npm install --global np
 npm install --global trash-cli
+npm install --global vsce
