@@ -5,4 +5,4 @@ cp .gitignore ~
 cp .hyper.js ~
 cp .vimrc ~
 
-wallpaper ./assets/wallpaper_mammoth.jpg
+wallpaper set ./assets/wallpaper_mammoth.jpg
