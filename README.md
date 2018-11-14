@@ -9,7 +9,7 @@
 Update plugins:
 
 ```
-plugins=( [plugins...] zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git jira zsh-syntax-highlighting zsh-autosuggestions)
 ```
 
 Update prompt:
