@@ -31,7 +31,7 @@ brew cask install transmission
 brew cask install visual-studio-code
 brew cask install vlc
 
-brew install node
+brew install node@10
 brew install tree
 brew install unrar
 brew install wallpaper
