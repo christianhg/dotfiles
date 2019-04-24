@@ -19,6 +19,12 @@ autoload -U promptinit; promptinit
 prompt pure
 ```
 
+Fix ZSH autocompletion issue (see https://github.com/robbyrussell/oh-my-zsh/issues/5157#issuecomment-226031519):
+
+```
+LC_CTYPE=en_US.UTF-8
+```
+
 Refresh:
 
 ```
