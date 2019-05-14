@@ -25,6 +25,12 @@ Fix ZSH autocompletion issue (see https://github.com/robbyrussell/oh-my-zsh/issu
 LC_CTYPE=en_US.UTF-8
 ```
 
+Make `~/code` the default path:
+
+```
+export CDPATH=.:~:~/code
+```
+
 Refresh:
 
 ```
