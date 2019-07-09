@@ -43,6 +43,7 @@ brew install zsh zsh-completions
 brew cleanup
 
 npm install --global npm
+npm install --global http-server
 npm install --global np
 npm install --global trash-cli
 npm install --global vsce
