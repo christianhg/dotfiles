@@ -23,11 +23,9 @@ brew cask install google-chrome-canary
 brew cask install hyper
 brew cask install intellij-idea
 brew cask install istat-menus
-brew cask install lastfm
 brew cask install little-snitch
 brew cask install postman
 brew cask install spectacle
-brew cask install transmission
 brew cask install visual-studio-code
 brew cask install vlc
 
