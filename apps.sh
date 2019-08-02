@@ -15,6 +15,7 @@ brew tap caskroom/versions
 brew tap caskroom/fonts
 
 brew cask install brave
+brew cask install docker
 brew cask install font-fira-code
 brew cask install firefox
 brew cask install flux
