@@ -5,6 +5,9 @@
 
 [alias]
 
+  # Update the date of a commit
+  cd = "!f() { git commit --amend --no-edit --date \"$(date)\"; }; f"
+
   # View abbreviated SHA, description, and history graph of the latest 20 commits.
   l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
