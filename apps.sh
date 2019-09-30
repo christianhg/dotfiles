@@ -29,6 +29,7 @@ brew cask install spectacle
 brew cask install visual-studio-code
 brew cask install vlc
 
+brew install bat
 brew install node@10
 brew install tree
 brew install unrar
