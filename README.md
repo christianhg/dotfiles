@@ -31,6 +31,17 @@ Make `~/code` the default path:
 export CDPATH=.:~:~/code
 ```
 
+Add `grep` alias:
+
+```
+alias grep='grep --text --ignore-case --color --exclude-dir={.svn,.git,.hg,CVS}'
+```
+
+* `--text`: treats all files as text files, even the ones that have headers that make them (look like) binary (like .class)
+* `--ignore-case`: you seldom care about the case of the search hits
+- --color: use colour to decorate search hits and line numbers
+- --exclude-dir: exclude hits inside irrelevant directories
+
 Refresh:
 
 ```
