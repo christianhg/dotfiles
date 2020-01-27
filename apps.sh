@@ -28,6 +28,7 @@ brew cask install postman
 brew cask install spectacle
 brew cask install visual-studio-code
 brew cask install vlc
+brew cask install homebrew/cask-fonts/font-jetbrains-mono
 
 brew install bat
 brew install node@10
