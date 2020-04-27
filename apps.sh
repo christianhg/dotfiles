@@ -31,7 +31,7 @@ brew cask install vlc
 brew cask install homebrew/cask-fonts/font-jetbrains-mono
 
 brew install bat
-brew install node@10
+brew install node@12
 brew install tree
 brew install unrar
 brew install wallpaper
