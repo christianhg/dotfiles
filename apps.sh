@@ -20,7 +20,6 @@ brew cask install font-fira-code
 brew cask install firefox
 brew cask install flux
 brew cask install google-chrome
-brew cask install google-chrome-canary
 brew cask install hyper
 brew cask install istat-menus
 brew cask install little-snitch
