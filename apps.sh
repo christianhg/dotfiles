@@ -10,27 +10,28 @@ brew update
 brew upgrade
 
 # Install Homebrew-Cask
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew tap caskroom/fonts
+brew tap homebrew/cask
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-fonts
 
-brew cask install brave
-brew cask install docker
-brew cask install font-fira-code
-brew cask install firefox
-brew cask install flux
-brew cask install google-chrome
-brew cask install hyper
-brew cask install istat-menus
-brew cask install little-snitch
-brew cask install postman
-brew cask install spectacle
-brew cask install visual-studio-code
-brew cask install vlc
-brew cask install homebrew/cask-fonts/font-jetbrains-mono
+brew install brave-browser
+brew install docker
+brew install font-fira-code
+brew install firefox
+brew install flux
+brew install google-chrome
+brew install hyper
+brew install istat-menus
+brew install little-snitch
+brew install postman
+brew install spectacle
+brew install visual-studio-code
+brew install vlc
+brew install homebrew/cask-fonts/font-jetbrains-mono
 
 brew install bat
 brew install node@12
+brew install node@14
 brew install tree
 brew install unrar
 brew install wallpaper
