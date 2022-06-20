@@ -63,13 +63,3 @@ Add to .zshrc:
 ```
 eval "$(rbenv init -)"
 ```
-
-## Set up scripts
-
-Insert the following into `~/.log-work-on-jira-issue.conf`:
-
-```
-jira_url=https://cci-jira.ccieurope.com
-jira_user=
-jira_password=
-```
