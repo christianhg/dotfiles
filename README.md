@@ -48,6 +48,17 @@ Refresh:
 source ~/.zshrc
 ```
 
+## Set up SSH keys
+
+Add to `./ssh/config`:
+
+```
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+```
+
 ## Make Ruby usable
 
 Reference: https://github.com/rbenv/rbenv/issues/938#issuecomment-285342541
