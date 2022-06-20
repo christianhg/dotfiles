@@ -29,13 +29,11 @@ brew install visual-studio-code
 brew install vlc
 brew install homebrew/cask-fonts/font-jetbrains-mono
 
-brew install bat
-brew install node@12
 brew install node@14
-brew install tree
-brew install unrar
+brew install node@16
 brew install wallpaper
 brew install yarn
+brew install pnpm
 
 brew install zsh zsh-completions
 
@@ -43,7 +41,5 @@ brew install zsh zsh-completions
 brew cleanup
 
 npm install --global npm
-npm install --global http-server
-npm install --global np
 npm install --global trash-cli
 npm install --global vsce
