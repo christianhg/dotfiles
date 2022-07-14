@@ -18,7 +18,7 @@ brew install brave-browser
 brew install docker
 brew install font-fira-code
 brew install firefox
-brew install flux
+brew install --cask flux
 brew install google-chrome
 brew install hyper
 brew install istat-menus
