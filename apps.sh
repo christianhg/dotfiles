@@ -16,21 +16,24 @@ brew tap homebrew/cask-fonts
 
 brew install brave-browser
 brew install docker
-brew install font-fira-code
 brew install firefox
 brew install --cask flux
 brew install google-chrome
+brew install httpie
 brew install hyper
 brew install istat-menus
 brew install little-snitch
-brew install postman
 brew install spectacle
 brew install visual-studio-code
 brew install vlc
 brew install homebrew/cask-fonts/font-jetbrains-mono
 
-brew install node@14
+brew install --cask karabiner-elements
+brew install koekeishiya/formulae/skhd
+brew install koekeishiya/formulae/yabai
+
 brew install node@16
+brew install node@18
 brew install wallpaper
 brew install yarn
 brew install pnpm
