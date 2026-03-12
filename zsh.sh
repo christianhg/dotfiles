@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# Install oh-my-zsh (RUNZSH=no prevents it from launching a new shell)
-RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Install oh-my-zsh (skip if already installed)
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
 # Install plugins into oh-my-zsh custom directory (skip if already cloned)
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mkdir -p ~/code
+
 cp .gitconfig ~
 cp .gitignore ~
 
