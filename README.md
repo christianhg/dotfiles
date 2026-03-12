@@ -58,9 +58,11 @@ The SSH config is copied by `bootstrap.sh`.
 ### 8. Start window management services
 
 ```
-brew services start skhd
-brew services start yabai
+skhd --start-service
+yabai --start-service
 ```
+
+macOS will prompt for Accessibility permissions — grant them in System Settings > Privacy & Security > Accessibility.
 
 ## What's included
 
