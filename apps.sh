@@ -45,5 +45,8 @@ brew install pnpm
 brew install zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions
 brew install pure
 
+# Fix insecure directories for zsh completions
+chmod -R go-w "$(brew --prefix)/share"
+
 # Remove outdated versions from the cellar.
 brew cleanup
