@@ -1,23 +1,66 @@
 # christianhg's dotfiles
 
-## Setup
+## New machine setup
 
-Install apps and CLI tools:
+### 1. Clone this repo
+
+```
+git clone https://github.com/christianhg/dotfiles.git ~/code/dotfiles
+cd ~/code/dotfiles
+```
+
+### 2. Install apps and CLI tools
 
 ```
 ./apps.sh
 ```
 
-Set up ZSH:
+### 3. Set up ZSH (oh-my-zsh, plugins, Pure prompt)
 
 ```
 ./zsh.sh
 ```
 
-Bootstrap configs and wallpaper:
+### 4. Copy configs and set wallpaper
 
 ```
 ./bootstrap.sh
+```
+
+### 5. Apply macOS preferences
+
+```
+./.macos
+```
+
+Requires restart to take full effect.
+
+### 6. Set up secrets
+
+Create `~/.zshrc.local` for API keys and machine-specific config:
+
+```
+export ANTHROPIC_API_KEY="..."
+```
+
+This file is sourced by `.zshrc` but not tracked in this repo.
+
+### 7. Set up SSH keys
+
+Restore key from password vault, then add to `~/.ssh/config`:
+
+```
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+```
+
+### 8. Start window management services
+
+```
+brew services start skhd
+brew services start yabai
 ```
 
 ## What's included
@@ -29,18 +72,4 @@ Bootstrap configs and wallpaper:
 - **Window management**: yabai + skhd
 - **Key remapping**: Karabiner-Elements
 - **Git**: Global gitconfig and gitignore
-
-## Secrets
-
-Machine-specific secrets (API keys, etc.) go in `~/.zshrc.local`, which is sourced by `.zshrc` but not tracked in this repo.
-
-## SSH keys
-
-Add to `~/.ssh/config`:
-
-```
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
-```
+- **macOS**: Sensible defaults, disable Apple Intelligence, Siri, Liquid Glass, window tiling
