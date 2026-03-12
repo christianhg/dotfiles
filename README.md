@@ -1,76 +1,46 @@
 # christianhg's dotfiles
 
-## Set up ZSH
+## Setup
+
+Install apps and CLI tools:
+
+```
+./apps.sh
+```
+
+Set up ZSH:
 
 ```
 ./zsh.sh
 ```
 
-Update plugins:
+Bootstrap configs and wallpaper:
 
 ```
-plugins=(git jira zsh-syntax-highlighting zsh-autosuggestions)
+./bootstrap.sh
 ```
 
-Update prompt:
+## What's included
 
-```
-autoload -U promptinit; promptinit
-prompt pure
-```
+- **Shell**: ZSH with oh-my-zsh, Pure prompt, syntax highlighting, autosuggestions
+- **Terminal**: Ghostty (Atom Dark theme, JetBrainsMono Nerd Font)
+- **Editor**: Neovim (LazyVim)
+- **Multiplexer**: tmux
+- **Window management**: yabai + skhd
+- **Key remapping**: Karabiner-Elements
+- **Git**: Global gitconfig and gitignore
 
-Fix ZSH autocompletion issue (see https://github.com/robbyrussell/oh-my-zsh/issues/5157#issuecomment-226031519):
+## Secrets
 
-```
-LC_CTYPE=en_US.UTF-8
-```
+Machine-specific secrets (API keys, etc.) go in `~/.zshrc.local`, which is sourced by `.zshrc` but not tracked in this repo.
 
-Make `~/code` the default path:
+## SSH keys
 
-```
-export CDPATH=.:~:~/code
-```
-
-Add `grep` alias:
-
-```
-alias grep='grep --text --ignore-case --color --exclude-dir={.svn,.git,.hg,CVS}'
-```
-
-* `--text`: treats all files as text files, even the ones that have headers that make them (look like) binary (like .class)
-* `--ignore-case`: you seldom care about the case of the search hits
-- --color: use colour to decorate search hits and line numbers
-- --exclude-dir: exclude hits inside irrelevant directories
-
-Refresh:
-
-```
-source ~/.zshrc
-```
-
-## Set up SSH keys
-
-Add to `./ssh/config`:
+Add to `~/.ssh/config`:
 
 ```
 Host *
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_rsa
-```
-
-## Make Ruby usable
-
-Reference: https://github.com/rbenv/rbenv/issues/938#issuecomment-285342541
-
-```
-brew install rbenv
-rbenv install 2.3.0
-rbenv global 2.3.0
-```
-
-Add to .zshrc:
-
-```
-eval "$(rbenv init -)"
 ```

@@ -1,6 +1,9 @@
 # Folder view configuration files.
 .DS_Store
 
+# Claude Code
+.claude/
+
 # Thumbnail cache files.
 ._*
 Thumbs.db

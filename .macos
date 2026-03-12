@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Close any open System Preferences panes, to prevent them from overriding
+# Close any open System Settings panes, to prevent them from overriding
 # settings we’re about to change.
-osascript -e 'tell application "System Preferences" to quit'
+osascript -e ‘tell application "System Settings" to quit’
 
 # Ask for the administrator password upfront.
 sudo -v
@@ -189,6 +189,9 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
 
+# Show desktop icons (Tahoe hides them by default)
+defaults write com.apple.finder CreateDesktop -bool true
+
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
 
@@ -208,6 +211,9 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Finder: show sidebar
+defaults write com.apple.finder ShowSidebar -bool true
 
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -547,6 +553,48 @@ defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 # Expand the print dialog by default
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
+
+###############################################################################
+# Apple Intelligence (macOS 15.3+)                                            #
+###############################################################################
+
+# Disable Apple Intelligence
+defaults write com.apple.CloudSubscriptionFeatures.optIn "545129924" -bool false
+
+# Disable Siri
+defaults write com.apple.assistant.support "Assistant Enabled" -bool false
+
+# Disable Game Mode
+defaults write com.apple.GameController bluetoothPrefsMenuLongPress -bool false
+
+###############################################################################
+# Liquid Glass (macOS Tahoe)                                                  #
+###############################################################################
+
+# Disable Liquid Glass system-wide
+defaults write -g com.apple.SwiftUI.DisableSolarium -bool YES
+
+###############################################################################
+# Window Manager (macOS Sonoma+)                                              #
+###############################################################################
+
+# Disable window tiling when dragging to screen edges
+defaults write com.apple.WindowManager EnableTilingByEdgeDrag -bool false
+
+# Disable window tiling when dragging to menu bar
+defaults write com.apple.WindowManager EnableTopTilingByEdgeDrag -bool false
+
+# Disable holding Option key to tile
+defaults write com.apple.WindowManager EnableTilingOptionAccelerator -bool false
+
+# Remove margins between tiled windows
+defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
+
+# Disable click-wallpaper-to-show-desktop
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
+# Hide desktop widgets (macOS Tahoe adds them by default)
+defaults write com.apple.WindowManager StandardHideWidgets -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #

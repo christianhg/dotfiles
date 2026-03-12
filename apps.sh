@@ -3,46 +3,44 @@
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Make sure we’re using the latest Homebrew.
+# Make sure we're using the latest Homebrew.
 brew update
 
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Install Homebrew-Cask
-brew tap homebrew/cask
-brew tap homebrew/cask-versions
-brew tap homebrew/cask-fonts
-
-brew install brave-browser
-brew install docker
-brew install firefox
+# Apps
+brew install --cask brave-browser
+brew install --cask firefox
 brew install --cask flux
-brew install google-chrome
-brew install httpie
-brew install hyper
-brew install istat-menus
-brew install little-snitch
-brew install spectacle
-brew install visual-studio-code
-brew install vlc
-brew install homebrew/cask-fonts/font-jetbrains-mono
-
+brew install --cask ghostty
+brew install --cask google-chrome
+brew install --cask istat-menus
 brew install --cask karabiner-elements
+brew install --cask little-snitch
+brew install --cask visual-studio-code
+brew install --cask font-jetbrains-mono-nerd-font
+
+# CLI tools
+brew install gh
+brew install httpie
+brew install jq
+brew install neovim
+brew install ripgrep
+brew install tmux
+brew install wallpaper
+
+# Window management
 brew install koekeishiya/formulae/skhd
 brew install koekeishiya/formulae/yabai
 
-brew install node@16
-brew install node@18
-brew install wallpaper
-brew install yarn
+# Node / JS
+brew install node@22
 brew install pnpm
 
-brew install zsh zsh-completions
+# Shell
+brew install zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions
+brew install pure
 
 # Remove outdated versions from the cellar.
 brew cleanup
-
-npm install --global npm
-npm install --global trash-cli
-npm install --global vsce
