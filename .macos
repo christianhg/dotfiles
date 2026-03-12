@@ -13,7 +13,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###
 
 # Set: ComputerName
-scutil --set ComputerName "starbeast"
+read -p "Computer name: " COMPUTER_NAME
+scutil --set ComputerName "$COMPUTER_NAME"
 
 # Set: Standby delay to 24 hours for all power sources.
 # Default: 1 hour.
