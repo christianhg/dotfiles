@@ -9,43 +9,20 @@ git clone https://github.com/christianhg/dotfiles.git ~/code/dotfiles
 cd ~/code/dotfiles
 ```
 
-### 2. Install apps and CLI tools
+### 2. Run setup
 
 ```
-./apps.sh
+./setup.sh
 ```
 
-### 3. Set up ZSH (oh-my-zsh, plugins, Pure prompt)
+This will:
+- Install Homebrew and all apps/tools (from `Brewfile`)
+- Set up oh-my-zsh with plugins
+- Symlink all configs to the home directory
+- Apply macOS preferences
+- Start yabai and skhd
 
-```
-./zsh.sh
-```
-
-### 4. Copy configs and set wallpaper
-
-```
-./bootstrap.sh
-```
-
-### 5. Apply macOS preferences
-
-```
-./.macos
-```
-
-Requires restart to take full effect.
-
-### 6. Set up secrets
-
-Create `~/.zshrc.local` for API keys and machine-specific config:
-
-```
-export ANTHROPIC_API_KEY="..."
-```
-
-This file is sourced by `.zshrc` but not tracked in this repo.
-
-### 7. Set up SSH keys
+### 3. Manual steps after restart
 
 Restore `~/.ssh/id_rsa` from password vault, then add it to the keychain:
 
@@ -53,16 +30,13 @@ Restore `~/.ssh/id_rsa` from password vault, then add it to the keychain:
 ssh-add --apple-use-keychain ~/.ssh/id_rsa
 ```
 
-The SSH config is copied by `bootstrap.sh`.
-
-### 8. Start window management services
+Create `~/.zshrc.local` for API keys and machine-specific config:
 
 ```
-skhd --start-service
-yabai --start-service
+export ANTHROPIC_API_KEY="..."
 ```
 
-macOS will prompt for Accessibility permissions — grant them in System Settings > Privacy & Security > Accessibility.
+Grant Accessibility permissions to skhd and yabai in System Settings > Privacy & Security > Accessibility.
 
 ## What's included
 
@@ -74,3 +48,17 @@ macOS will prompt for Accessibility permissions — grant them in System Setting
 - **Key remapping**: Karabiner-Elements
 - **Git**: Global gitconfig and gitignore
 - **macOS**: Sensible defaults, disable Apple Intelligence, Siri, Liquid Glass, window tiling
+
+## Updating
+
+After changing configs, they're already live (symlinked). To update Homebrew packages:
+
+```
+brew bundle --file=~/code/dotfiles/Brewfile
+```
+
+To capture what's currently installed:
+
+```
+brew bundle dump --file=~/code/dotfiles/Brewfile --force
+```
