@@ -2,6 +2,10 @@
 
 cp .gitconfig ~
 cp .gitignore ~
+
+mkdir -p ~/.ssh
+cp .ssh/config ~/.ssh/config
+chmod 600 ~/.ssh/config
 cp .vimrc ~
 cp .zshrc ~
 cp .tmux.conf ~

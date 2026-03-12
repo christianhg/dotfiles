@@ -47,14 +47,7 @@ This file is sourced by `.zshrc` but not tracked in this repo.
 
 ### 7. Set up SSH keys
 
-Restore key from password vault, then add to `~/.ssh/config`:
-
-```
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
-```
+Restore `~/.ssh/id_rsa` from password vault. The SSH config is copied by `bootstrap.sh`.
 
 ### 8. Start window management services
 
