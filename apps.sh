@@ -3,6 +3,9 @@
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Add Homebrew to PATH (Apple Silicon)
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Make sure we're using the latest Homebrew.
 brew update
 
