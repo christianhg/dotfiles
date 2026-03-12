@@ -10,6 +10,7 @@ cp .ssh/config ~/.ssh/config
 chmod 600 ~/.ssh/config
 cp .vimrc ~
 cp .zshrc ~
+cp .zshenv ~
 cp .tmux.conf ~
 
 mkdir -p ~/.config/skhd
