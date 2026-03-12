@@ -47,7 +47,13 @@ This file is sourced by `.zshrc` but not tracked in this repo.
 
 ### 7. Set up SSH keys
 
-Restore `~/.ssh/id_rsa` from password vault. The SSH config is copied by `bootstrap.sh`.
+Restore `~/.ssh/id_rsa` from password vault, then add it to the keychain:
+
+```
+ssh-add --apple-use-keychain ~/.ssh/id_rsa
+```
+
+The SSH config is copied by `bootstrap.sh`.
 
 ### 8. Start window management services
 
