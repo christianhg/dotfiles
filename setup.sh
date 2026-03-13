@@ -26,6 +26,11 @@ echo "==> Linking configs"
 echo "==> Applying macOS preferences"
 "$DOTFILES/.macos"
 
+echo "==> Setting up yabai sudoers (for scripting addition)"
+YABAI_BIN="$(which yabai)"
+YABAI_HASH="$(shasum -a 256 "$YABAI_BIN" | cut -d " " -f 1)"
+echo "$(whoami) ALL=(root) NOPASSWD: sha256:${YABAI_HASH} ${YABAI_BIN} --load-sa" | sudo tee /private/etc/sudoers.d/yabai
+
 echo "==> Starting window management"
 skhd --start-service
 yabai --start-service
@@ -37,3 +42,4 @@ echo "  2. Restore ~/.ssh/id_rsa from your password vault"
 echo "  3. Run: ssh-add --apple-use-keychain ~/.ssh/id_rsa"
 echo "  4. Create ~/.zshrc.local with your secrets"
 echo "  5. Grant Accessibility permissions to skhd and yabai"
+echo "  6. Partially disable SIP for yabai (see yabai wiki)"
